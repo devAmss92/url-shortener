@@ -1,22 +1,24 @@
+import React from 'react';
+import "./App.css";
+import video from "./assets/tunnel.mp4";
+import fallbackImage from "./assets/fallback-image.png"; 
 
 const BackgroundAnimate = () => {
-  return (
-    <ul className="background">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  )
-}
+    return (
+      <>
+        <div className='shadow-overlay' ></div>
+        <video 
+        playsInline 
+        autoPlay 
+        muted 
+        loop 
+        preload='auto' 
+        id='bg' 
+        poster={fallbackImage}>
+            <source src={video} type="video/mp4"/>   
+        </video>
+      </>
+    );
+  };
 
-export default BackgroundAnimate
+  export default BackgroundAnimate;
