@@ -11,8 +11,8 @@ const LinkResult = ({ inputValue }) => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await axios(`https://api.shrtco.de/v2/shorten?url=${inputValue}`);
-      setShortenLink(res.data.result.full_short_link);
+      const res = await axios(`https://tinyurl.com/api-create.php?url=${inputValue}`);
+      setShortenLink(res.data);
     } catch(err) {
       setError(err);
     } finally {
@@ -38,7 +38,7 @@ const LinkResult = ({ inputValue }) => {
     return <p className="noData">Loading...</p>
   }
   if(error) {
-    return <p className="noData">Something wne t wrong :(</p>
+    return <p className="noData">Something wne t wrong</p>
   }
 
 
