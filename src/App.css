@@ -85,7 +85,7 @@
   z-index: -3;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .container {
     width: 100%; /* Set the width of the container */
   }
